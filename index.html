@@ -4,12 +4,13 @@
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs>
     <!-- create your content here. just a box for now -->
-    <a-assets>
-  <a-asset-item id="couch" src="resources/couch3.png"></a-asset-item>
-</a-assets>
+    <!--<a-assets>
+  <a-asset-item id="couch" src="resources/couch.dae"></a-asset-item>
+</a-assets>-->
 <!-- use your gltf model -->
-<a-entity collada-model="##couch"></a-entity>
+<!--<a-entity collada-model="##couch"></a-entity>
     <!-- define a camera which will move according to the marker position -->
+    <a-image src="resources/couch3.png"></a-image>
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 </body>
