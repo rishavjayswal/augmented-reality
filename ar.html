@@ -2,7 +2,7 @@
 <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
 <script>
         	window.addEventListener('message', function(event) { 
-                        document.getElementById("entity").collada-model=event.data;
+                        document.getElementById("entity").collada-model="url("+event.data+")";
                         //document.getElementById("mtl").src=event.data+'.mtl';
                         alert('Inside ar.html outside if: '+document.getElementById("entity").collada-model);
     if (~event.origin.indexOf('http://github.com/rishavjayswal/augmented-reality')) { 
