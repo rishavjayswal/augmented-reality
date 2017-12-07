@@ -4,7 +4,7 @@
         	window.addEventListener('message', function(event) { 
                         document.getElementById("obj").src=event.data+'.obj';
                         document.getElementById("mtl").src=event.data+'.mtl';
-                        alert('Inside ar.html outside if: '+document.getElementById("obj").src);
+                        alert('Inside ar.html outside if: '+document.getElementById("obj").src+' event data:'+event.data);
     if (~event.origin.indexOf('http://github.com/rishavjayswal/augmented-reality')) { 
         document.getElementById("obj").src=event.data+'.obj';
             alert('Inside ar.html: '+document.getElementById("obj").src);
@@ -25,7 +25,7 @@
                 </a-assets> 
                 <!-- Using the asset management system. -->
                 <a-marker-camera preset="hiro"></a-marker-camera>
-                <a-entity obj-model="obj: #obj; mtl: #mtl" scale="0.5 0.5 0.5"></a-entity>
+                <a-entity collada-model="url(resources/couch.dae)" scale="0.5 0.5 0.5"></a-entity>
                 
                 <!-- <a-image src="resources/couch4.png"></a-image> -->
                 <a-marker-camera preset="hiro"></a-marker-camera> 
