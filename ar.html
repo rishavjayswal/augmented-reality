@@ -5,6 +5,7 @@
     if (~event.origin.indexOf('http://github.com/rishavjayswal/augmented-reality')) { 
         document.getElementById("obj").src=event.data+'.obj';
         document.getElementById("mtl").src=event.data+'.mtl';
+            console.log(document.getElementById("obj").src);
     } else { 
         return; 
     } 
