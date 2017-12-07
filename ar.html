@@ -2,9 +2,10 @@
 <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
 <script>
         	window.addEventListener('message', function(event) { 
+                        alert('Inside ar.html outside if: '+document.getElementById("obj").src);
     if (~event.origin.indexOf('http://github.com/rishavjayswal/augmented-reality')) { 
         document.getElementById("obj").src=event.data+'.obj';
-            alert('Inside ar.html: '+document.getElementById("obj").src)
+            alert('Inside ar.html: '+document.getElementById("obj").src);
         document.getElementById("mtl").src=event.data+'.mtl';
             //console.log(document.getElementById("obj").src);
     } else { 
