@@ -1,0 +1,66 @@
+<!doctype HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="aframe.min.js"></script>
+<script src="aframe-ar.js"> </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<style type="text/css">
+.object {
+
+float: right;
+    margin-right: 10px;
+    border: 1px solid;
+    
+    }
+    .dynamicImgs{
+    border-bottom: 1px solid silver;
+    padding-left:14%;
+    }
+</style>
+</head>
+  <body>
+  <div class="row">
+  <div class="col-sm-6 col-md-6 col-lg-9" style="height: 600px;">
+  <iframe style="width:100%;height:100%;" name="arvrFrame" id="arvrFrame" src="arvr.html"></iframe>
+  </div>
+  
+ <div class="col-sm-6 col-md-6 col-lg-3" style="border: 1px solid;height: 600px;overflow: scroll;"> 
+ <div class="dynamicImgs"><img onclick="loadDynamicImage('red-sofa.jpg');" src="red-sofa.jpg"></div> 
+ <div class="dynamicImgs"><img onclick="loadDynamicImage('red-sofa.jpg');" src="red-sofa.jpg"></div>
+ <div class="dynamicImgs"><img onclick="loadDynamicImage('red-sofa.jpg');" src="brown-sofa.jpg"></div>
+ <div class="dynamicImgs"><img onclick="loadDynamicImage('red-sofa.jpg');" src="sofa-3d.jpeg"></div>
+ <div class="dynamicImgs"><img onclick="loadDynamicImage('red-sofa.jpg');" src="sofa-3d.jpeg"></div>
+ <div class="dynamicImgs"><img onclick="loadDynamicImage('red-sofa.jpg');" src="sofa-3d.jpeg"></div>
+ <div style="padding-left:14%;"><img onclick="loadDynamicImage('red-sofa.jpg');" src="sofa-3d.jpeg"></div> 
+ 	</div>
+  </div>
+  </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  function loadDynamicImage1() {
+var htmlc = '<a-scene embedded arjs="sourceType: webcam;"> <a-assets><a-asset-item id="couch-obj" src="resources/DesignChair1.obj"></a-asset-item><a-asset-item id="couch-mtl" src="resources/DesignChair1.mtl"></a-asset-item> </a-assets> <a-entity obj-model="obj: #couch-obj; mtl: #couch-mtl" scale="0.5 0.5 0.5"></a-entity> <a-marker-camera preset="hiro"></a-marker-camera></a-scene>';
+document.getElementById("htmlb").innerHTML=htmlc;
+}
+
+function loadDynamicImage(url) {
+ var iframe = document.getElementById("arvrFrame");
+   var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+   var obj = innerDoc.getElementById('couch-obj').removeAttribute('src');
+   innerDoc.getElementById('couch-obj').setAttribute('src', 'resources/couch.obj');
+   //obj.src = 'resources/DesignChair1.obj';
+   
+   var mtl = innerDoc.getElementById('couch-mtl').removeAttribute('src');
+   innerDoc.getElementById('couch-mtl').setAttribute('src', 'resources/couch.mtl?');
+   //mtl.src = 'resources/DesignChair1.mtl';
+   
+   //document.getElementById('arvrFrame').contentDocument.location.reload(true);
+    //console.log(mtl.src);
+}
+</script>
+</html>

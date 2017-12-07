@@ -1,0 +1,11 @@
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;' id="htmlb" onload="loadDynamicImage1()">
+        
+</body>
+<script>
+function loadDynamicImage1() {
+var htmlc = '<a-scene embedded arjs="sourceType: webcam;"> <a-assets><a-asset-item id="couch-obj" src="resources/DesignChair1.obj"></a-asset-item><a-asset-item id="couch-mtl" src="resources/DesignChair1.mtl"></a-asset-item> </a-assets> <a-entity obj-model="obj: #couch-obj; mtl: #couch-mtl" scale="0.5 0.5 0.5"></a-entity> <a-marker-camera preset="hiro"></a-marker-camera></a-scene>';
+document.getElementById("htmlb").innerHTML=htmlc;
+}
+</script>
