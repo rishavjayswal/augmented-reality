@@ -4,8 +4,9 @@
         	window.addEventListener('message', function(event) { 
     if (~event.origin.indexOf('http://github.com/rishavjayswal/augmented-reality')) { 
         document.getElementById("obj").src=event.data+'.obj';
+            alert('Inside ar.html: '+document.getElementById("obj").src)
         document.getElementById("mtl").src=event.data+'.mtl';
-            console.log(document.getElementById("obj").src);
+            //console.log(document.getElementById("obj").src);
     } else { 
         return; 
     } 
