@@ -11,6 +11,7 @@
   <script>
   	function loadObject(url) {
   		var iFrame = document.getElementById("arFrame");
+		alert('inside index: '+url);
   		iFrame.contentWindow.postMessage(url, '*');
   	}
   </script>
