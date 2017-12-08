@@ -6,7 +6,7 @@
                         var e = document.querySelector('#entity');
                         //e.setAttribute("collada-model", 'url('+event.data+')');
                         e.setAttribute("obj-model", 'obj:url('+event.data+'.obj);mtl:url('+event.data+'.mtl)');
-                        e.setAttribute("scale",'0.5 0.5 0.5')
+                        e.setAttribute("scale",'0.5 0.5 0.5');
                         //document.getElementById("mtl").src=event.data+'.mtl';
                         //alert('Inside ar.html outside if: '+document.getElementById("entity").collada-model);
     
@@ -22,7 +22,7 @@
                 <!-- Using the asset management system. -->
                 <a-marker-camera preset="hiro"></a-marker-camera>
                 <!-- a-entity id="entity" collada-model="url(resources/DesignChair1.dae)" scale="0.5 0.5 0.5"></a-entity -->
-                <a-entity id="entity" obj-model="obj:url(scale="0.5 0.5 0.5"></a-entity>
+                <a-entity id="entity" position="0 0.5 0" obj-model="obj:url(scale="0.5 0.5 0.5"></a-entity>
                 <!-- <a-image src="resources/couch4.png"></a-image> -->
                 <a-marker-camera preset="hiro"></a-marker-camera> 
         </a-scene>
