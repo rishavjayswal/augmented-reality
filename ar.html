@@ -2,7 +2,9 @@
 <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
 <script>
         	window.addEventListener('message', function(event) { 
-                        document.getElementById("entity").collada-model="url("+event.data+")";
+                        //document.getElementById("entity").collada-model="url("+event.data+")";
+                        var e = document.querySelector('#entity');
+                        e.setAttribute("collada-model", 'url(couch.dae)');
                         //document.getElementById("mtl").src=event.data+'.mtl';
                         alert('Inside ar.html outside if: '+document.getElementById("entity").collada-model);
     if (~event.origin.indexOf('http://github.com/rishavjayswal/augmented-reality')) { 
@@ -25,7 +27,7 @@
                 </a-assets> 
                 <!-- Using the asset management system. -->
                 <a-marker-camera preset="hiro"></a-marker-camera>
-                <a-entity id="entity" collada-model="url(resources/couch.dae)" scale="0.5 0.5 0.5"></a-entity>
+                <a-entity id="entity" collada-model="url(resources/DesignChair1.dae)" scale="0.5 0.5 0.5"></a-entity>
                 
                 <!-- <a-image src="resources/couch4.png"></a-image> -->
                 <a-marker-camera preset="hiro"></a-marker-camera> 
