@@ -1,5 +1,5 @@
-<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-<script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+<script src="aframe.min.js"></script>
+<script src="aframe-ar.js"></script>
 
 <script>
         	window.addEventListener('message', function(event) { 
@@ -22,7 +22,7 @@
                         <a-entity id="entity" position="0 0.5 0" scale="0.3 0.3 0.3"></a-entity>
                 </a-marker-camera>
                 <!-- <a-image src="resources/couch4.png"></a-image> -->
-                <!-- a-marker-camera preset="hiro"></a-marker-camera -->
+                <a-marker-camera preset="hiro"></a-marker-camera>
                 <a-entity camera></a-entity>
         </a-scene>
 </body>
